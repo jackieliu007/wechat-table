@@ -1,0 +1,33 @@
+.page-body {
+    line-height: 1.6;
+}
+
+.tcell {
+    word-break: break-all;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    background-clip: border-box;
+    padding: .5em .3em;
+    text-align: center;
+    vertical-align: middle;
+    border-right: #f0f0f0 solid 1px;
+    border-bottom: #f0f0f0 solid 1px;
+    font-size: .8em;
+}
+
+.thead-cell {
+    color: white;
+}
+
+.tcell-fix-left-last::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    width: 30px;
+    transform: translateX(100%);
+    content: "";
+    pointer-events: none;
+    box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, .15);
+}

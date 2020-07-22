@@ -1,0 +1,5 @@
+<view class="page-body">
+	<view class="page-section">
+		<rich-text nodes="{{html}}"></rich-text>
+	</view>
+</view>

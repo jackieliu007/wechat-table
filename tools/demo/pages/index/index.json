@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "j-table": "../../components/j-table/index",
+    "j-table-1": "wechat-table/j-table/index"
+  }
+}
