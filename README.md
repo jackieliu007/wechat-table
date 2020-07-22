@@ -144,5 +144,5 @@ option: {
 
 #### 若使用上述配置，将呈现出如下页面，开发者可自行在工具中查看效果
 
-<!-- ![示例图片](./images/j-table-example.jpg) -->
+![示例图片](./images/j-table-example.jpg)
 ![示例图片](https://github.com/woshixiaoniqiu/wechat-table/blob/master/images/j-table-example.jpg)
