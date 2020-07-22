@@ -1,7 +1,7 @@
 {
   "name": "wechat-table",
-  "version": "1.0.1",
-  "description": "补充remade.md文档",
+  "version": "1.0.2",
+  "description": "添加github地址",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.empty"
+    "url": "https://github.com/woshixiaoniqiu/wechat-table"
   },
   "author": "j",
   "license": "MIT",
