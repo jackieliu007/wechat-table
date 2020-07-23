@@ -35,8 +35,8 @@
 | headOption.bgColor | string  | 表头背景色   | 'white'     |
 | bodyOption | object  | 表格body配置   | -     |
 | bodyOption.row | [ [{ }] ]  | 表格body行配置：二维数组，每个元素为每一行的配置，每一行包含该行所有单元格的配置对象，单元格配置对象参见下方body接口   | -     |
-| colOption | [ ]  | 表格每列宽度设置(单位：px), 例：[80, 80, 100, 100]。注意：固定单元格的left属性须与这里配置的对应   | -     |
-| width | number  | 表格宽度  | 设备宽度     |
+| colOption | number[]  | 表格每列宽度设置(单位：px，这里填写ipnhoe6下合适的宽度值即可，该组件对其他不同类型设备已做了自适应)。 例：[80, 80, 100, 100]。注意：固定单元格的left属性须与这里配置的对应   | -     |
+| width | number  | 表格宽度(单位px)。提示：如果不配置width值，则表格宽度自适应设备宽度；如果配置该值，建议开发者调用微信API获取设备信息，根据不同设备动态配置该值，以达到自适应效果。  | 设备宽度     |
 
 ### interface head
 
@@ -75,7 +75,7 @@ option: {
                 value: '',
                 rowspan: 2,
                 sticky: true,
-                left: 80
+                left: 120
             }, {
                 value: '分类',
                 colspan: 2
@@ -99,7 +99,7 @@ option: {
             }, {
                 value: '单价(元/斤)',
                 sticky: true,
-                isLastStickyCol: true,
+                isLastSticky: true,
                 left: 120
             }, {
                 prop: 'bigFruitPrice'
@@ -109,7 +109,7 @@ option: {
             [{
                 value: '存量(吨)',
                 sticky: true,
-                isLastStickyCol: true,
+                isLastSticky: true,
                 left: 120
             }, {
                 prop: 'bigFruitStock'

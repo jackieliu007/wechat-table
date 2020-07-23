@@ -1,7 +1,7 @@
 {
   "name": "wechat-table",
-  "version": "1.0.2",
-  "description": "添加github地址",
+  "version": "1.0.3",
+  "description": "一个可在微信小程序内展示复杂表格的组件库",
   "main": "miniprogram_dist/index.js",
   "scripts": {
     "dev": "gulp dev --develop",
