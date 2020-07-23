@@ -1,4 +1,3 @@
-export { };
 Component({
     properties: {
         option: {

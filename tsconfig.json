@@ -23,7 +23,7 @@
       "es6"
     ],
     "typeRoots": [
-      "./typings"
+      "typings"
     ]
   },
   "include": [
