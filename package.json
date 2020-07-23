@@ -1,6 +1,6 @@
 {
   "name": "wechat-table",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一个可在微信小程序内展示复杂表格的组件库",
   "main": "miniprogram_dist/index.js",
   "scripts": {
