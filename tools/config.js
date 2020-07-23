@@ -50,7 +50,7 @@ module.exports = {
                         cacheDirectory: true,
                     },
                 }, {
-                    loader: 'eslint-loader',
+                    // loader: 'eslint-loader',
                 }],
                 exclude: /node_modules/
             }, {

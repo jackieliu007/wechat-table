@@ -55,10 +55,10 @@ async function checkIncludedComponents(jsonPath, componentListMap) {
 
   const wholeFileBase = path.join(dirPath, fileName)
   let jsExt = '.js'
-  const isJsFileExists = await _.checkFileExists(wholeFileBase + '.ts')
-  if (isJsFileExists) {
-    jsExt = '.ts'
-  }
+  // const isJsFileExists = await _.checkFileExists(wholeFileBase + '.ts')
+  // if (isJsFileExists) {
+  //   jsExt = '.ts'
+  // }
 
   // 进入存储
   componentListMap.wxmlFileList.push(`${fileBase}.wxml`)

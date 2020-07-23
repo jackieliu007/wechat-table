@@ -1,21 +1,31 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es2015",
-    "lib": ["es2015", "es2017", "dom"],
-    "noImplicitAny": false,
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "baseUrl": ".",
-    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "ES5",
+    "allowJs": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata":true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "removeComments": true,
+    "pretty": true,
+    "strictPropertyInitialization": true,
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "typeRoots": [
+      "./typings"
+    ]
   },
-  "files": [
-    "node_modules/miniprogram-api-typings/index.d.ts"
-  ],
   "include": [
     "src/**/*.ts"
   ],

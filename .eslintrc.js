@@ -84,6 +84,7 @@ module.exports = {
     'indent': ["error", 4],
     'quotes': [0],
     'max-len': [0],
+    'no-var': false,
     'no-await-in-loop': 'off',
     'no-restricted-syntax': 'off',
     'promise/always-return': 'off',
