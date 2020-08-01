@@ -66,7 +66,7 @@ Component({
                         if (cell.sticky) {
                             tbody += `<td class="tcell ${cell.isLastSticky ? 'tcell-fix-left-last' : ''}" style="position: sticky; left: ${cell.left * r}px"  rowspan="${cell.rowspan}">${cell.value ? cell.value : data[cell.prop]}</td>`
                         } else {
-                            tbody += ` <td class="tcell" colspan="${cell.rowspan}">${cell.value ? cell.value : data[cell.prop]}</td>`
+                            tbody += ` <td class="tcell" rowspan="${cell.rowspan}">${cell.value ? cell.value : data[cell.prop]}</td>`
                         }
                         if (cellIndex === row.length - 1) {
                             tbody += `</tr>`
