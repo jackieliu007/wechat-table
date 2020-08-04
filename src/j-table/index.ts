@@ -29,7 +29,6 @@ Component({
             })
         },
         initHtml() {
-            console.log('执行initHtml')
             const option = this.properties.option;
             const data = this.properties.data;
             const r = this.data.systemInfo.rate;

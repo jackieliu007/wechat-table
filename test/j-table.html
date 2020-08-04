@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Title</title>
+    <style>
+        .page-body {
+            line-height: 1.6;
+        }
+
+        .tcell {
+            word-break: break-all;
+            box-sizing: border-box;
+            background-color: white;
+            color: #333;
+            background-clip: border-box;
+            padding: .5em .3em;
+            text-align: center;
+            vertical-align: middle;
+            border-right: #f0f0f0 solid 1px;
+            border-bottom: #f0f0f0 solid 1px;
+            font-size: .8em;
+        }
+
+        .thead-cell {
+            color: white;
+        }
+
+        .tcell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: -1px;
+            width: 30px;
+            transform: translateX(100%);
+            content: "";
+            pointer-events: none;
+            box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, .15);
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 375px; overflow: auto;border-left: #f0f0f0 solid 1px;border-top: #f0f0f0 solid 1px;">
+        <table style="table-layout: fixed;border-collapse: separate;border-spacing: 0;width: 540px;">
+            <col style="width: 120px" />
+            <col style="width: 120px" />
+            <col style="width: 150px" />
+            <col style="width: 150px" />
+            <thead>
+                <tr>
+                    <th class="thead-cell tcell " style="background-color:rgb(66, 139, 202);position: sticky; left: 0px"
+                        rowspan="2" colspan="undefined">水果</th>
+                    <th class="thead-cell tcell "
+                        style="background-color:rgb(66, 139, 202);position: sticky; left: 120px" rowspan="2"
+                        colspan="undefined"></th>
+                    <th class="thead-cell tcell" style="background-color:rgb(66, 139, 202)" rowspan="undefined"
+                        colspan="2">分类</th>
+                </tr>
+                <tr>
+                    <th class="thead-cell tcell" style="background-color:rgb(66, 139, 202)" rowspan="undefined"
+                        colspan="undefined">大果</th>
+                    <th class="thead-cell tcell" style="background-color:rgb(66, 139, 202)" rowspan="undefined"
+                        colspan="undefined">小果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tcell " style="position: sticky; left: 0px" rowspan="2">苹果</td>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        单价(元/斤)</td>
+                    <td class="tcell" rowspan="undefined">7</td>
+                    <td class="tcell" rowspan="undefined">4</td>
+                </tr>
+                <tr>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        存量(吨)</td>
+                    <td class="tcell" rowspan="undefined">200</td>
+                    <td class="tcell" rowspan="undefined">300</td>
+                </tr>
+                <tr>
+                    <td class="tcell " style="position: sticky; left: 0px" rowspan="2">香蕉</td>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        单价(元/斤)</td>
+                    <td class="tcell" rowspan="undefined">5</td>
+                    <td class="tcell" rowspan="undefined">3.5</td>
+                </tr>
+                <tr>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        存量(吨)</td>
+                    <td class="tcell" rowspan="undefined">600</td>
+                    <td class="tcell" rowspan="undefined">1000</td>
+                </tr>
+                <tr>
+                    <td class="tcell " style="position: sticky; left: 0px" rowspan="2">苹果</td>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        单价(元/斤)</td>
+                    <td class="tcell" rowspan="undefined">7</td>
+                    <td class="tcell" rowspan="undefined">4</td>
+                </tr>
+                <tr>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        存量(吨)</td>
+                    <td class="tcell" rowspan="undefined">200</td>
+                    <td class="tcell" rowspan="undefined">300</td>
+                </tr>
+                <tr>
+                    <td class="tcell " style="position: sticky; left: 0px" rowspan="2">香蕉</td>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        单价(元/斤)</td>
+                    <td class="tcell" rowspan="undefined">5</td>
+                    <td class="tcell" rowspan="undefined">3.5</td>
+                </tr>
+                <tr>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        存量(吨)</td>
+                    <td class="tcell" rowspan="undefined">600</td>
+                    <td class="tcell" rowspan="undefined">1000</td>
+                </tr>
+                <tr>
+                    <td class="tcell " style="position: sticky; left: 0px" rowspan="2">苹果</td>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        单价(元/斤)</td>
+                    <td class="tcell" rowspan="undefined">7</td>
+                    <td class="tcell" rowspan="undefined">4</td>
+                </tr>
+                <tr>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        存量(吨)</td>
+                    <td class="tcell" rowspan="undefined">200</td>
+                    <td class="tcell" rowspan="undefined">300</td>
+                </tr>
+                <tr>
+                    <td class="tcell " style="position: sticky; left: 0px" rowspan="2">香蕉</td>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        单价(元/斤)</td>
+                    <td class="tcell" rowspan="undefined">5</td>
+                    <td class="tcell" rowspan="undefined">3.5</td>
+                </tr>
+                <tr>
+                    <td class="tcell tcell-fix-left-last" style="position: sticky; left: 120px" rowspan="undefined">
+                        存量(吨)</td>
+                    <td class="tcell" rowspan="undefined">600</td>
+                    <td class="tcell" rowspan="undefined">1000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
