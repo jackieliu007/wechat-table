@@ -8,12 +8,15 @@ Component({
         }
     },
     data: {
-        systemInfo: { windowWidth: 375, rate: 1 },
+        systemInfo: { windowWidth: 375, rate: 0 },
         html: ``
     },
     observers: {
-        'data,option': function () {
-            if (this.properties.data.length && Object.keys(this.properties.option).length) this.initHtml();
+        'data,option': async function () {
+            if (this.properties.data.length && Object.keys(this.properties.option).length) {
+                if (!this.data.systemInfo.rate) await this.setSystemInfo();
+                this.initHtml();
+            }
         }
     },
     methods: {
@@ -37,7 +40,7 @@ Component({
             let col = ``;
             let thead = `<thead>`;
             let tbody = `<tbody>`;
-            let html = `<div style="width: ${option.width ? option.width : this.data.systemInfo.windowWidth}px; overflow: auto;border-left: #f0f0f0 solid 1px;border-top: #f0f0f0 solid 1px;">
+            let html = `<div style="width: ${option.width ? option.width * r : this.data.systemInfo.windowWidth}px; overflow: auto;border-left: #f0f0f0 solid 1px;border-top: #f0f0f0 solid 1px;">
         <table style="table-layout: fixed;border-collapse: separate;border-spacing: 0;width: ${tableWidth * r}px;">`
             option.colOption.forEach((v: number) => {
                 col += `<col style="width: ${v * r}px" />`
@@ -83,8 +86,6 @@ Component({
         }
     },
     lifetimes: {
-        async attached() {
-            await this.setSystemInfo();
-        }
+        attached() { }
     },
 })
