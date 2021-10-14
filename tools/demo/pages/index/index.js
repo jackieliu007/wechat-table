@@ -30,7 +30,7 @@ Page({
                 ],
                 bgColor: 'rgb(66, 139, 202)'
             },
-            bodyOptiton: {
+            bodyOption: {
                 row: [
                     [{
                         value: '',

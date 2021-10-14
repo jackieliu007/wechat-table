@@ -1,2 +1,2 @@
 <j-table option="{{tableOption}}" data="{{tableData}}"></j-table>
-<j-table-1 option="{{tableOption}}" data="{{tableData}}" />
+<!-- <j-table-1 option="{{tableOption}}" data="{{tableData}}" /> -->

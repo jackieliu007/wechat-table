@@ -6,13 +6,18 @@
     - 支持表格左右滑动（可自定义配置表格固定列）
     - 不支持点击事件
 
+## 与上一版本(v1.0.6)差异
+
+1. 取消headOption.bgColor属性，新增headOption.thStickyStyle和headOption.thStyle属性，用于设置表头单元格样式
+2. 新增bodyOption.tdStickyStyle和bodyOption.tdStyle属性，用于设置表格body单元格的样式
+
 ## 使用教程
 
 * 下载包之后，使用微信开发者工具构建npm
 
 * 在page.json中引入j-table自定义组件
 
-``` js
+```js
     {
         "usingComponents": {
             "j-table": "wechat-table/j-table/index"
@@ -22,7 +27,7 @@
 
 * 在page.wxml模板中使用j-table组件（传入option配置和表格数据data）
 
-``` html
+```html
 <j-table option="{{tableOption}}" data="{{tableData}}" />
 ```
 
@@ -32,9 +37,12 @@
 |-----|-----|-----|-------|
 | headOption | object  | 表头配置   | -     |
 | headOption.row | [ [{ }] ]  | 表头行配置：二维数组，每个元素为每一行的配置，每一行包含该行所有单元格的配置对象，单元格配置对象参见下方head接口   | -     |
-| headOption.bgColor | string  | 表头背景色   | 'white'     |
+| headOption.thStickyStyle | string  | 表头固定单元格的样式   | -     |
+| headOption.thStyle | string  | 表头可滑动单元格的样式   | -     |
 | bodyOption | object  | 表格body配置   | -     |
 | bodyOption.row | [ [{ }] ]  | 表格body行配置：二维数组，每个元素为每一行的配置，每一行包含该行所有单元格的配置对象，单元格配置对象参见下方body接口   | -     |
+| bodyOption.tdStickyStyle | string  | 表格body固定单元格的样式   | -     |
+| bodyOption.tdStyle | string  | 表格body可滑动单元格的样式   | -     |
 | colOption | number[]  | 表格每列宽度设置(单位：px，这里填写ipnhoe6下合适的宽度值即可，该组件对其他不同类型设备已做了自适应)。 例：[80, 80, 100, 100]。注意：固定单元格的left属性须与这里配置的对应   | -     |
 | width | number  | 表格宽度(单位：px，这里填写ipnhoe6下合适的宽度值即可，该组件对其他不同类型设备已做了自适应)。 | 设备宽度     |
 
@@ -62,7 +70,7 @@
 
 ### option配置示例
 
-``` js
+```js
 option: {
     headOption: {
         row: [
@@ -86,9 +94,10 @@ option: {
                 value: '小果',
             }]
         ],
-        bgColor: 'rgb(66, 139, 202)'
+        thStickyStyle: 'background-color:#007f80;',
+        thStyle: 'background-color:#428bca;'
     },
-    bodyOptiton: {
+    bodyOption: {
         row: [
             [{
                 value: '',
@@ -116,7 +125,9 @@ option: {
             }, {
                 prop: 'smallFruitStock'
             }]
-        ]
+        ],
+        tdStickyStyle: 'background-color:#99ffff;',
+        tdStyle: 'background-color:#b3ff66;'
     },
     colOption: [120, 120, 150, 150]
 }
@@ -124,7 +135,7 @@ option: {
 
 ### 表格数据data示例
 
-``` js
+```js
 [{
         fruitName: '苹果',
         bigFruitPrice: 7,
@@ -142,6 +153,10 @@ option: {
 ]
 ```
 
-#### 若使用上述配置，将呈现出如下页面
+#### 若使用上述配置，将呈现出如下页面(若图片加载不出来可以百度一下解决方案)
 
 ![示例图片](./images/j-table-example.jpg)
+
+#### 动画展示  
+
+<iframe height=600 width=400 src="./images/wechat-table.gif">

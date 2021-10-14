@@ -18,6 +18,7 @@
 
 .thead-cell {
     color: white;
+    background-color: #428bca;
 }
 
 .tcell-fix-left-last::after {
