@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "wechat-table": "^1.0.0"
+    "wechat-table": "^1.0.8"
   }
 }

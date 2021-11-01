@@ -28,7 +28,8 @@ Page({
                         value: '小果',
                     }]
                 ],
-                bgColor: 'rgb(66, 139, 202)'
+                thStickyStyle: 'background-color:#007f80;',
+                thStyle: 'background-color:#428bca;'
             },
             bodyOption: {
                 row: [
@@ -58,7 +59,9 @@ Page({
                     }, {
                         prop: 'smallFruitStock'
                     }]
-                ]
+                ],
+                tdStickyStyle: 'background-color:#99ffff;',
+                tdStyle: 'background-color:#b3ff66;'
             },
             colOption: [120, 120, 150, 150]
         };
@@ -75,34 +78,7 @@ Page({
             smallFruitPrice: 3.5,
             bigFruitStock: 600,
             smallFruitStock: 1000
-        }, {
-            fruitName: '苹果',
-            bigFruitPrice: 7,
-            smallFruitPrice: 4,
-            bigFruitStock: 200,
-            smallFruitStock: 300
-        },
-        {
-            fruitName: '香蕉',
-            bigFruitPrice: 5,
-            smallFruitPrice: 3.5,
-            bigFruitStock: 600,
-            smallFruitStock: 1000
-        }, {
-            fruitName: '苹果',
-            bigFruitPrice: 7,
-            smallFruitPrice: 4,
-            bigFruitStock: 200,
-            smallFruitStock: 300
-        },
-        {
-            fruitName: '香蕉',
-            bigFruitPrice: 5,
-            smallFruitPrice: 3.5,
-            bigFruitStock: 600,
-            smallFruitStock: 1000
-        }
-        ];
+        }];
         this.setData({
             tableOption: option,
             tableData: data
