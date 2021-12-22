@@ -112,7 +112,7 @@ Component({
                         thead += "<th class=\"thead-cell tcell " + (cell.isLastSticky ? 'tcell-fix-left-last' : '') + "\" style=\"position: sticky; left: " + cell.left * r + "px;" + thStickyStyle + "\" rowspan=\"" + cell.rowspan + "\" colspan=\"" + cell.colspan + "\">" + cell.value + "</th>";
                     }
                     else {
-                        thead += " <th class=\"thead-cell tcell\" style=" + thStyle + " rowspan=\"" + cell.rowspan + "\" colspan=\"" + cell.colspan + "\">" + cell.value + "</th>";
+                        thead += " <th class=\"thead-cell tcell\" style=\"" + thStyle + "\" rowspan=\"" + cell.rowspan + "\" colspan=\"" + cell.colspan + "\">" + cell.value + "</th>";
                     }
                     if (cellIndex === row.length - 1) {
                         thead += "</tr>";
@@ -130,7 +130,7 @@ Component({
                             tbody += "<td class=\"tcell " + (cell.isLastSticky ? 'tcell-fix-left-last' : '') + "\" style=\"position: sticky; left: " + cell.left * r + "px;" + tdStickyStyle + "\" rowspan=\"" + cell.rowspan + "\">" + (cell.value ? cell.value : data[cell.prop]) + "</td>";
                         }
                         else {
-                            tbody += " <td class=\"tcell\" style=" + tdStyle + " rowspan=\"" + cell.rowspan + "\">" + (cell.value ? cell.value : data[cell.prop]) + "</td>";
+                            tbody += " <td class=\"tcell\" style=\"" + tdStyle + "\" rowspan=\"" + cell.rowspan + "\">" + (cell.value ? cell.value : data[cell.prop]) + "</td>";
                         }
                         if (cellIndex === row.length - 1) {
                             tbody += "</tr>";
